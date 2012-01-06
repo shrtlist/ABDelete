@@ -61,6 +61,14 @@
     return YES;
 }
 
+#pragma mark - Memory management
+
+- (void)dealloc
+{
+    // Removes all the entries specifying a given observer from the receiver’s dispatch table.
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 
 #pragma mark - Show and dismiss the ABPersonViewController
 
