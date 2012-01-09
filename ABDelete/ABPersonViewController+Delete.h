@@ -1,4 +1,9 @@
 /*
+ * File: ABPersonViewController+Delete.h
+ * Abstract: ABPersonViewController category with address book contact deletion.
+ * Version: 1.1
+ *
+ * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,9 +19,8 @@
  * limitations under the License.
  */
 
-// Name of the notification posted when an address book contact is deleted
-extern NSString *kAddressBookContactDeleted;
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface UIActionSheet (Dismiss)
+@interface ABPersonViewController (Delete)
 
 @end

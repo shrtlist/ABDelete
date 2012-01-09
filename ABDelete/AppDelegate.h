@@ -1,4 +1,9 @@
 /*
+ * File: AppDelegate.h
+ * Abstract: UIApplication's delegate class, the central controller of this demo.
+ * Version: 1.1
+ *
+ * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +20,8 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <AddressBookUI/AddressBookUI.h>
+#import "ABPersonViewController+Delete.h" // Use the ABPersonViewController+Delete category
+#import <AddressBookUI/ABPeoplePickerNavigationController.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, ABPeoplePickerNavigationControllerDelegate, ABPersonViewControllerDelegate>
 

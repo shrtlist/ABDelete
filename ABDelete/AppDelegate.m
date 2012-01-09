@@ -1,4 +1,9 @@
 /*
+ * File: AppDelegate.m
+ * Abstract: UIApplication's delegate class, the central controller of this demo.
+ * Version: 1.1
+ *
+ * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,7 +20,6 @@
  */
 
 #import "AppDelegate.h"
-#import "UIActionSheet+Dismiss.h"
 
 @implementation AppDelegate
 
@@ -29,46 +33,20 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    // Register for notifications when the an address book contact is deleted
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(dismissPersonViewController) 
-                                                 name:kAddressBookContactDeleted object:nil];
-
     // Instantiate the picker and set its delegate
     self.picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = self;
     
-    // Instantiate the person view controller and set its properties
+    // Instantiate the ABPersonViewController+Delete category and set its properties
     self.personViewController = [[ABPersonViewController alloc] init];
     personViewController.personViewDelegate = self;
     personViewController.allowsEditing = YES;
-    
-    @try
-    {
-        [personViewController setValue:[NSNumber numberWithBool:YES] forKey:@"allowsActions"];
-        
-        // Display the "Delete" and "Cancel" buttons
-        [personViewController setValue:[NSNumber numberWithBool:YES] forKey:@"allowsDeletion"];
-    }
-    @catch (NSException * e)
-    {
-        // Ignore any exception
-    }
 
     [window setRootViewController:picker];
     [window makeKeyAndVisible];
     
     return YES;
 }
-
-#pragma mark - Memory management
-
-- (void)dealloc
-{
-    // Removes all the entries specifying a given observer from the receiver’s dispatch table.
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
 
 #pragma mark - Show and dismiss the ABPersonViewController
 
