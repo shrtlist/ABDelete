@@ -1,5 +1,5 @@
 ## ABDelete
-Demo of ABPersonViewController+Delete category (default ABPersonViewController only allows editing, not deletion).
+Demo of ABPersonViewController+Delete category (default ABPersonViewController only allows editing, not deletion). This category does not use any private methods.
 
 Note that in Simulator, the ABPeoplePickerNavigationController's tableview does not appear to get refreshed after a deletion. This may be due to differences between the device framework and the Simulator framework.
 
