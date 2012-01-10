@@ -1,7 +1,7 @@
 /*
  * File: AppDelegate.h
  * Abstract: UIApplication's delegate class, the central controller of this demo.
- * Version: 1.1
+ * Version: 1.2
  *
  * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com
@@ -27,6 +27,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) ABPeoplePickerNavigationController *picker;
-@property (strong, nonatomic) ABPersonViewController *personViewController;
 
 @end

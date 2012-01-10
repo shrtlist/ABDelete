@@ -1,7 +1,7 @@
 /*
  * File: ABPersonViewController+Delete.h
  * Abstract: ABPersonViewController category with address book contact deletion.
- * Version: 1.1
+ * Version: 1.2
  *
  * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com

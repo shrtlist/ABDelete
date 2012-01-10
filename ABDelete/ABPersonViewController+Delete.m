@@ -1,7 +1,7 @@
 /*
  * File: ABPersonViewController+Delete.m
  * Abstract: ABPersonViewController category with address book contact deletion.
- * Version: 1.1
+ * Version: 1.2
  *
  * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com
@@ -31,9 +31,7 @@
     {
         @try
         {
-            [self setValue:[NSNumber numberWithBool:YES] forKey:@"allowsActions"];
-            
-            // Display the "Delete" and "Cancel" buttons
+            // Display the "Delete" and "Cancel" action sheet
             [self setValue:[NSNumber numberWithBool:YES] forKey:@"allowsDeletion"];
         }
         @catch (NSException * e)

@@ -1,7 +1,7 @@
 /*
  * File: AppDelegate.m
  * Abstract: UIApplication's delegate class, the central controller of this demo.
- * Version: 1.1
+ * Version: 1.2
  *
  * Created by Marco Abundo on 1/6/12.
  * Copyright 2012 shrtlist.com
@@ -25,7 +25,6 @@
 
 @synthesize window;
 @synthesize picker;
-@synthesize personViewController;
 
 #pragma mark - UIApplicationDelegate conformance
 
@@ -36,11 +35,6 @@
     // Instantiate the picker and set its delegate
     self.picker = [[ABPeoplePickerNavigationController alloc] init];
     picker.peoplePickerDelegate = self;
-    
-    // Instantiate the ABPersonViewController+Delete category and set its properties
-    self.personViewController = [[ABPersonViewController alloc] init];
-    personViewController.personViewDelegate = self;
-    personViewController.allowsEditing = YES;
 
     [window setRootViewController:picker];
     [window makeKeyAndVisible];
@@ -48,12 +42,18 @@
     return YES;
 }
 
-#pragma mark - Show and dismiss the ABPersonViewController
+#pragma mark - Show and dismiss the ABPersonViewController+Delete
 
 - (void)showPersonViewController:(ABRecordRef)person
-{	
+{
+    // Instantiate the ABPersonViewController+Delete category and set its properties
+    ABPersonViewController *personViewController = [[ABPersonViewController alloc] init];
+    personViewController.personViewDelegate = self;
+    personViewController.allowsEditing = YES;
     personViewController.displayedPerson = person;
-	[self.picker pushViewController:personViewController animated:YES];
+
+    // Show the ABPersonViewController instance
+	[picker pushViewController:personViewController animated:YES];
 }
 
 - (void)dismissPersonViewController
