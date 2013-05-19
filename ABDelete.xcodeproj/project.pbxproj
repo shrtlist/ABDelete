@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		84117AB214BB89B500C31837 /* ABPersonViewController+Delete.m in Sources */ = {isa = PBXBuildFile; fileRef = 84117AB114BB89B500C31837 /* ABPersonViewController+Delete.m */; };
+		846CC7D717488077000F5E43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846CC7D617488077000F5E43 /* Default-568h@2x.png */; };
 		848F5D3014B6C4BD00B78974 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D2F14B6C4BD00B78974 /* UIKit.framework */; };
 		848F5D3214B6C4BD00B78974 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D3114B6C4BD00B78974 /* Foundation.framework */; };
 		848F5D3414B6C4BD00B78974 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D3314B6C4BD00B78974 /* CoreGraphics.framework */; };
@@ -15,12 +16,12 @@
 		848F5D3C14B6C4BD00B78974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F5D3B14B6C4BD00B78974 /* main.m */; };
 		848F5D4B14B6C53400B78974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F5D4A14B6C53400B78974 /* AppDelegate.m */; };
 		848F5D4E14B6C57B00B78974 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D4C14B6C57100B78974 /* AddressBookUI.framework */; };
-		848F5D5014B6C5BC00B78974 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 848F5D4F14B6C5BC00B78974 /* README.markdown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84117AB014BB89B500C31837 /* ABPersonViewController+Delete.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ABPersonViewController+Delete.h"; sourceTree = "<group>"; };
 		84117AB114BB89B500C31837 /* ABPersonViewController+Delete.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ABPersonViewController+Delete.m"; sourceTree = "<group>"; };
+		846CC7D617488077000F5E43 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		848F5D2B14B6C4BD00B78974 /* ABDelete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABDelete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F5D2F14B6C4BD00B78974 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		848F5D3114B6C4BD00B78974 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,7 +33,6 @@
 		848F5D4914B6C53400B78974 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		848F5D4A14B6C53400B78974 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		848F5D4C14B6C57100B78974 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
-		848F5D4F14B6C5BC00B78974 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 		848F5D2014B6C4BD00B78974 = {
 			isa = PBXGroup;
 			children = (
-				848F5D4F14B6C5BC00B78974 /* README.markdown */,
+				846CC7D617488077000F5E43 /* Default-568h@2x.png */,
 				848F5D3514B6C4BD00B78974 /* ABDelete */,
 				848F5D2E14B6C4BD00B78974 /* Frameworks */,
 				848F5D2C14B6C4BD00B78974 /* Products */,
@@ -128,7 +128,7 @@
 		848F5D2214B6C4BD00B78974 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = shrtlist.com;
 			};
 			buildConfigurationList = 848F5D2514B6C4BD00B78974 /* Build configuration list for PBXProject "ABDelete" */;
@@ -154,7 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848F5D3A14B6C4BD00B78974 /* InfoPlist.strings in Resources */,
-				848F5D5014B6C5BC00B78974 /* README.markdown in Resources */,
+				846CC7D717488077000F5E43 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,6 +191,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -204,6 +208,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				SDKROOT = iphoneos;
@@ -216,12 +221,17 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
