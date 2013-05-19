@@ -1,15 +1,10 @@
 /*
- * File: AppDelegate.m
- * Abstract: UIApplication's delegate class, the central controller of this demo.
- * Version: 1.2
- *
- * Created by Marco Abundo on 1/6/12.
- * Copyright 2012 shrtlist.com
+ * Copyright 2013 shrtlist.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *    http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
@@ -26,7 +21,7 @@
 @synthesize window;
 @synthesize picker;
 
-#pragma mark - UIApplicationDelegate conformance
+#pragma mark - UIApplicationDelegate protocol conformance
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -65,7 +60,7 @@
 #endif
 }
 
-#pragma mark - ABPeoplePickerNavigationControllerDelegate conformance
+#pragma mark - ABPeoplePickerNavigationControllerDelegate protocol conformance
 
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)picker shouldContinueAfterSelectingPerson:(ABRecordRef)person
 {    
@@ -84,9 +79,10 @@
 // peoplePicker is our root view controller in this demo, so Cancel should do nothing. 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker
 {
+    NSLog(@"peoplePicker is our root view controller in this demo, so Cancel does nothing.");
 }
 
-#pragma mark - ABPersonViewControllerDelegate conformance
+#pragma mark - ABPersonViewControllerDelegate protocol conformance
 
 - (BOOL)personViewController:(ABPersonViewController *)personViewController shouldPerformDefaultActionForPerson:(ABRecordRef)person property:(ABPropertyID)property identifier:(ABMultiValueIdentifier)identifierForValue
 {
