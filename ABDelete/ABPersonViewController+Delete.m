@@ -29,9 +29,10 @@
             // Display the "Delete" and "Cancel" action sheet
             [self setValue:[NSNumber numberWithBool:YES] forKey:@"allowsDeletion"];
         }
-        @catch (NSException * e)
+        @catch (NSException * exception)
         {
-            // Ignore any exception
+            // Log any exception
+            NSLog(@"%@", exception);
         }
     }
     
