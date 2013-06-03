@@ -16,10 +16,11 @@
 
 #import "AppDelegate.h"
 
-@implementation AppDelegate
+@interface AppDelegate () // Class extension
+@property (nonatomic, strong) ABPeoplePickerNavigationController *peoplePicker;
+@end
 
-@synthesize window;
-@synthesize picker;
+@implementation AppDelegate
 
 #pragma mark - UIApplicationDelegate protocol conformance
 
@@ -27,14 +28,21 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    // Instantiate the picker and set its delegate
-    self.picker = [[ABPeoplePickerNavigationController alloc] init];
-    picker.peoplePickerDelegate = self;
+    // Instantiate the peoplePicker and set its delegate
+    self.peoplePicker = [[ABPeoplePickerNavigationController alloc] init];
+    self.peoplePicker.peoplePickerDelegate = self;
 
-    [window setRootViewController:picker];
-    [window makeKeyAndVisible];
+    [self.window setRootViewController:self.peoplePicker];
+    [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+#pragma mark - Memory management
+
+- (void)dealloc
+{
+    self.peoplePicker.peoplePickerDelegate = nil;
 }
 
 #pragma mark - Show and dismiss the ABPersonViewController+Delete
@@ -48,12 +56,12 @@
     personViewController.displayedPerson = person;
 
     // Show the ABPersonViewController instance
-	[picker pushViewController:personViewController animated:YES];
+	[self.peoplePicker pushViewController:personViewController animated:YES];
 }
 
 - (void)dismissPersonViewController
 {
-    [picker dismissModalViewControllerAnimated:YES];
+    [self.peoplePicker dismissModalViewControllerAnimated:YES];
 
 #if TARGET_IPHONE_SIMULATOR
     NSLog(@"Simulator: table view not refreshed.");
@@ -62,7 +70,7 @@
 
 #pragma mark - ABPeoplePickerNavigationControllerDelegate protocol conformance
 
-- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)picker shouldContinueAfterSelectingPerson:(ABRecordRef)person
+- (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
 {    
     // Displays the information of a selected person
     [self showPersonViewController:person];

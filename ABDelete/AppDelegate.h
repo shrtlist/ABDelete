@@ -23,6 +23,5 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, ABPeoplePickerNavigationControllerDelegate, ABPersonViewControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) ABPeoplePickerNavigationController *picker;
 
 @end
