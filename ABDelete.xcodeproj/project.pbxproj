@@ -11,7 +11,6 @@
 		846CC7D717488077000F5E43 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 846CC7D617488077000F5E43 /* Default-568h@2x.png */; };
 		848F5D3014B6C4BD00B78974 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D2F14B6C4BD00B78974 /* UIKit.framework */; };
 		848F5D3214B6C4BD00B78974 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D3114B6C4BD00B78974 /* Foundation.framework */; };
-		848F5D3414B6C4BD00B78974 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 848F5D3314B6C4BD00B78974 /* CoreGraphics.framework */; };
 		848F5D3A14B6C4BD00B78974 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 848F5D3814B6C4BD00B78974 /* InfoPlist.strings */; };
 		848F5D3C14B6C4BD00B78974 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F5D3B14B6C4BD00B78974 /* main.m */; };
 		848F5D4B14B6C53400B78974 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 848F5D4A14B6C53400B78974 /* AppDelegate.m */; };
@@ -25,7 +24,6 @@
 		848F5D2B14B6C4BD00B78974 /* ABDelete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABDelete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		848F5D2F14B6C4BD00B78974 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		848F5D3114B6C4BD00B78974 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		848F5D3314B6C4BD00B78974 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		848F5D3714B6C4BD00B78974 /* ABDelete-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ABDelete-Info.plist"; sourceTree = "<group>"; };
 		848F5D3914B6C4BD00B78974 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		848F5D3B14B6C4BD00B78974 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,7 +41,6 @@
 				848F5D4E14B6C57B00B78974 /* AddressBookUI.framework in Frameworks */,
 				848F5D3014B6C4BD00B78974 /* UIKit.framework in Frameworks */,
 				848F5D3214B6C4BD00B78974 /* Foundation.framework in Frameworks */,
-				848F5D3414B6C4BD00B78974 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,7 +71,6 @@
 				848F5D4C14B6C57100B78974 /* AddressBookUI.framework */,
 				848F5D2F14B6C4BD00B78974 /* UIKit.framework */,
 				848F5D3114B6C4BD00B78974 /* Foundation.framework */,
-				848F5D3314B6C4BD00B78974 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
