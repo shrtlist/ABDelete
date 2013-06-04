@@ -23,7 +23,7 @@ Note that in Simulator, `ABPeoplePickerNavigationController` does not appear to 
 Xcode 4.2, iOS 5.0 SDK, LLVM Compiler 3.0, Automated Reference Counting (ARC).
 
 ## Deployment target
-iOS 4.3
+iOS 4.3 and later
 
 ## License
 The source code is available under the Apache License, Version 2.0
