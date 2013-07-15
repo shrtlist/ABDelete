@@ -16,11 +16,10 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate () // Class extension
-@property (nonatomic, strong) ABPeoplePickerNavigationController *peoplePicker;
-@end
-
 @implementation AppDelegate
+{
+    ABPeoplePickerNavigationController *peoplePickerNavigationController;
+}
 
 #pragma mark - UIApplicationDelegate protocol conformance
 
@@ -29,10 +28,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
     // Instantiate the peoplePicker and set its delegate
-    self.peoplePicker = [[ABPeoplePickerNavigationController alloc] init];
-    self.peoplePicker.peoplePickerDelegate = self;
+    peoplePickerNavigationController = [[ABPeoplePickerNavigationController alloc] init];
+    peoplePickerNavigationController.peoplePickerDelegate = self;
 
-    [self.window setRootViewController:self.peoplePicker];
+    [self.window setRootViewController:peoplePickerNavigationController];
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -42,7 +41,7 @@
 
 - (void)dealloc
 {
-    self.peoplePicker.peoplePickerDelegate = nil;
+    peoplePickerNavigationController.peoplePickerDelegate = nil;
 }
 
 #pragma mark - Show and dismiss the ABPersonViewController+Delete
@@ -55,13 +54,13 @@
     personViewController.allowsEditing = YES;
     personViewController.displayedPerson = person;
 
-    // Show the ABPersonViewController instance
-	[self.peoplePicker pushViewController:personViewController animated:YES];
+    // Show the ABPersonViewController+Delete category instance
+	[peoplePickerNavigationController pushViewController:personViewController animated:YES];
 }
 
 - (void)dismissPersonViewController
 {
-    [self.peoplePicker dismissModalViewControllerAnimated:YES];
+    [peoplePickerNavigationController dismissModalViewControllerAnimated:YES];
 
 #if TARGET_IPHONE_SIMULATOR
     NSLog(@"Simulator: table view not refreshed.");
