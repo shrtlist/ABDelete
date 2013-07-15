@@ -5,9 +5,10 @@ A category on `ABPersonViewController` that supports address book contact deleti
     #import "ABPersonViewController+Delete.h"
     #import <AddressBookUI/ABPeoplePickerNavigationController.h>
     
-    // Instantiate the peoplePicker and set its delegate
-    self.peoplePicker = [[ABPeoplePickerNavigationController alloc] init];
-    self.peoplePicker.peoplePickerDelegate = self;
+    // Instantiate the ABPeoplePickerNavigationController and set its delegate
+    self.peoplePickerNavigationController = [[ABPeoplePickerNavigationController alloc] init];
+    self.peoplePickerNavigationController.peoplePickerDelegate = self;
+
     // Instantiate the ABPersonViewController+Delete category and set its properties
     ABPersonViewController *personViewController = [[ABPersonViewController alloc] init];
     personViewController.personViewDelegate = self;
@@ -15,7 +16,7 @@ A category on `ABPersonViewController` that supports address book contact deleti
     personViewController.displayedPerson = person;
 
     // Show the ABPersonViewController instance
-    [self.peoplePicker pushViewController:personViewController animated:YES];
+    [self.peoplePickerNavigationController pushViewController:personViewController animated:YES];
 
 Note that in Simulator, `ABPeoplePickerNavigationController` does not appear to get refreshed after a deletion. This may be due to differences between the device framework and the Simulator framework.
 
