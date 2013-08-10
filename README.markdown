@@ -1,7 +1,9 @@
-## ABPersonViewController+Delete
+### ABPersonViewController+Delete
 A category on `ABPersonViewController` that supports address book contact deletion (default `ABPersonViewController` only supports editing). This category does not use any private methods.
 
-## Usage
+![](http://i.imgur.com/Edf6Zle.png)
+
+### Usage
     #import "ABPersonViewController+Delete.h"
     #import <AddressBookUI/ABPeoplePickerNavigationController.h>
     
@@ -20,14 +22,14 @@ A category on `ABPersonViewController` that supports address book contact deleti
 
 Note that in Simulator, `ABPeoplePickerNavigationController` does not appear to get refreshed after a deletion. This may be due to differences between the device framework and the Simulator framework.
 
-## Build requirements
+### Build requirements
 Xcode 4.2, iOS 5.0 SDK, LLVM Compiler 3.0, Automated Reference Counting (ARC).
 
-## Deployment target
+### Deployment target
 iOS 4.3 and later
 
-## License
+### License
 The source code is available under the Apache License, Version 2.0
 
-## Contributing
+### Contributing
 Forks, patches and other feedback are always welcome.
