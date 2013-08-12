@@ -1,5 +1,5 @@
 ### ABPersonViewController+Delete
-A category on `ABPersonViewController` that supports address book contact deletion (default `ABPersonViewController` only supports editing). This category does not use any private methods.
+A category on `ABPersonViewController` that supports address book contact deletion (default `ABPersonViewController` only supports updating). This category does not use any private methods.
 
 ![](http://i.imgur.com/Edf6Zle.png)
 
