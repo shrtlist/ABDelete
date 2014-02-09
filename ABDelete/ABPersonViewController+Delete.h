@@ -18,7 +18,10 @@
 
 /*
  * ABPersonViewController category with address book contact deletion.
+ * This category is deprecated as of iOS 7.
  */
 @interface ABPersonViewController (Delete)
+
+- (id)init NS_DEPRECATED_IOS(2_0, 7_0);
 
 @end
